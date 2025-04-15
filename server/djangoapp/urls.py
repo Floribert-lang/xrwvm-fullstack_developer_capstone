@@ -18,6 +18,8 @@ urlpatterns = [
     # path for register
     path('register/', views.registration, name='registration'),
 
+    #path for get_cars
+
     # path for dealer reviews view
 
     # path for add a review view

@@ -14,6 +14,7 @@ import logging
 import json
 from django.views.decorators.csrf import csrf_exempt
 from .populate import initiate
+from .models import CarMake, CarModel
 
 
 # Get an instance of a logger
@@ -44,6 +45,8 @@ def logout_request(request):
     logout(request)
     data = {"userName":""}
     return JsonResponse(data)
+
+
 
 # Create a `registration` view to handle sign up request
 @csrf_exempt
@@ -94,3 +97,4 @@ def registration(request):
 # Create a `add_review` view to submit a review
 # def add_review(request):
 # ...
+
