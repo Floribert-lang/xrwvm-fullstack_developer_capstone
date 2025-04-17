@@ -13,9 +13,11 @@ class CarMakeAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
     inlines = [CarModelInline]
 
+
 # CarModel Admin
 @admin.register(CarModel)
 class CarModelAdmin(admin.ModelAdmin):
     list_display = ('name', 'make', 'type', 'year', 'created_at')
     list_filter = ('type', 'year', 'make')
     search_fields = ('name',)
+

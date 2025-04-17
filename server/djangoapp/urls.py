@@ -18,6 +18,9 @@ urlpatterns = [
     # path for register
     path('register/', views.registration, name='registration'),
 
+    #path for get cars
+    path(route='get_cars/', view=views.get_cars, name ='getcars'),
+
     # path for get_dealerships
     path(route='get_dealers', view=views.get_dealerships, name='get_dealers'),
     path(route='get_dealers/<str:state>', view=views.get_dealerships, name='get_dealers_by_state'),
